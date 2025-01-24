@@ -1,13 +1,9 @@
 <script setup lang="ts">
-  const count = ref(1)
-  const double = computed(() => count.value * 2)
-  const increment = () => {
-    count.value++;
-  }
+ const { count, doubleCount, increment } = useCounter()
 </script>
 
 <template>
   <p>{{count}}</p>
-  <p>{{double}}</p>
+  <p>{{doubleCount}}</p>
   <button @click="increment">increment</button>
 </template>
