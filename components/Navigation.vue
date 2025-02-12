@@ -2,15 +2,15 @@
 const linkList = [
   {
     name: 'HOME',
-    pass: '/',
+    path: '/',
   },
   {
     name: 'about',
-    pass: '/about',
+    path: '/about',
   },
   {
     name: 'counter',
-    pass: '/counter',
+    path: '/counter',
   }
 ]
 </script>
@@ -18,7 +18,7 @@ const linkList = [
 <template>
   <ul>
     <li v-for="(item, index) in linkList" :key="index">
-      <NuxtLink :to=item.pass>{{ item.name }}</NuxtLink>
+      <NuxtLink :to=item.path>{{ item.name }}</NuxtLink>
     </li>
   </ul>
 </template>
